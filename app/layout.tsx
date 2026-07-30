@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+const isGitHubPagesBuild = process.env.GITHUB_PAGES === "true";
+const assetBase = isGitHubPagesBuild ? "/customdance-project-page" : "";
+
 export const metadata: Metadata = {
   title: {
     default: "CustomDance | Interactive 3D Choreography Authoring",
@@ -23,7 +26,7 @@ export const metadata: Metadata = {
     { name: "Rawan Alghofaili" },
   ],
   icons: {
-    icon: "/favicon.png",
+    icon: `${assetBase}/favicon.png`,
   },
   openGraph: {
     title: "CustomDance",
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/media/hero-teaser.webp",
+        url: `${assetBase}/assets/media/hero-teaser.webp`,
         width: 2800,
         height: 870,
         alt: "CustomDance choreography results.",

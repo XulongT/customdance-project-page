@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter Tight";
-  src: url("/assets/fonts/inter-tight-latin-var.woff2") format("woff2");
+  src: url("../public/assets/fonts/inter-tight-latin-var.woff2") format("woff2");
   font-display: swap;
   font-style: normal;
   font-weight: 100 900;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("/assets/fonts/jetbrains-mono-latin-var.woff2") format("woff2");
+  src: url("../public/assets/fonts/jetbrains-mono-latin-var.woff2") format("woff2");
   font-display: swap;
   font-style: normal;
   font-weight: 100 800;

@@ -1,5 +1,7 @@
 import { BibtexBlock } from "./BibtexBlock";
 
+export const dynamic = "force-static";
+
 const authors = [
   { name: "Xulong Tang", affiliation: "1" },
   { name: "Kaixing Yang", affiliation: "3" },
@@ -15,7 +17,7 @@ const stages = [
     label: "Listen / plan",
     components: "MLLM planner / anchors / cues",
     accent: "amber",
-    image: "/assets/media/ui-planning.webp",
+    image: "assets/media/ui-planning.webp",
     alt: "CustomDance interface showing global text, Gemini-generated cues, anchors, and timeline slots.",
     copy: "A multimodal language model reads the music together with the creator's global intent, then proposes temporal anchors and local creativity cues for the timeline.",
   },
@@ -25,7 +27,7 @@ const stages = [
     label: "Search / select",
     components: "Retriever / Dance Library / Recommendation",
     accent: "cyan",
-    image: "/assets/media/ui-retrieval.webp",
+    image: "assets/media/ui-retrieval.webp",
     alt: "CustomDance interface showing local text, body-part controls, a ranked motion list, and selected timeline phrases.",
     copy: "For each slot, the creator can edit a local prompt and body-part intensity or variety controls. A trimodal Retriever ranks previewable, real dance phrases from the library.",
   },
@@ -35,7 +37,7 @@ const stages = [
     label: "Connect / repair",
     components: "Completer / Diagnoser / Remaker",
     accent: "rust",
-    image: "/assets/media/ui-refinement.webp",
+    image: "assets/media/ui-refinement.webp",
     alt: "CustomDance Diagnoser interface showing a selected local region for motion repair.",
     copy: "The Completer fills gaps between selected phrases. The Diagnoser helps locate local anomalies, and the Remaker resynthesizes a selected full-body or joint-group window.",
   },
@@ -64,7 +66,7 @@ export default function Home() {
       <section className="hero" id="top" aria-labelledby="hero-title">
         <img
           className="hero-media"
-          src="/assets/media/hero-teaser.webp"
+          src="assets/media/hero-teaser.webp"
           alt=""
           fetchPriority="high"
         />
@@ -172,10 +174,10 @@ export default function Home() {
               controls
               playsInline
               preload="metadata"
-              poster="/assets/media/hero-teaser.webp"
+              poster="assets/media/hero-teaser.webp"
             >
               <source
-                src="/assets/media/customdance_demo_video.mp4"
+                src="assets/media/customdance_demo_video.mp4"
                 type="video/mp4"
               />
               Your browser does not support HTML video.
@@ -204,7 +206,7 @@ export default function Home() {
 
           <figure className="overview-frame">
             <img
-              src="/assets/media/method-overview.webp"
+              src="assets/media/method-overview.webp"
               alt="Overview of CustomDance showing motif planning, trimodal phrase retrieval, and diffusion-based completion and refinement."
               loading="lazy"
             />
@@ -281,7 +283,7 @@ export default function Home() {
 
           <figure className="result-feature">
             <img
-              src="/assets/media/results-genres.webp"
+              src="assets/media/results-genres.webp"
               alt="Five customized choreographies across HanTang, Uyghur, Jazz, Korean, and Hip-Hop styles."
               loading="lazy"
             />
@@ -295,7 +297,7 @@ export default function Home() {
           <div className="result-grid">
             <figure>
               <img
-                src="/assets/media/results-ratings.webp"
+                src="assets/media/results-ratings.webp"
                 alt="Task-level ratings for controllability, pose satisfaction, and description fulfillment across five authoring conditions."
                 loading="lazy"
               />
@@ -307,7 +309,7 @@ export default function Home() {
             </figure>
             <figure>
               <img
-                src="/assets/media/results-ranking.webp"
+                src="assets/media/results-ranking.webp"
                 alt="Rank distributions for music alignment, description fulfillment, and overall performance."
                 loading="lazy"
               />
@@ -323,7 +325,7 @@ export default function Home() {
             <summary>View qualitative comparison</summary>
             <figure>
               <img
-                src="/assets/media/results-comparison.webp"
+                src="assets/media/results-comparison.webp"
                 alt="Qualitative comparison of CustomDance, MEGADance, Lodge, and a basic editor on a Popping choreography prompt."
                 loading="lazy"
               />
