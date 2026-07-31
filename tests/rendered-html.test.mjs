@@ -61,9 +61,13 @@ test("renders the CustomDance project page", async () => {
   assert.match(html, /Diagnoser/);
   assert.match(html, /Proceedings of the SIGGRAPH Asia 2026 Conference Papers/);
   assert.match(html, /Copy BibTeX/);
-  assert.match(
+  assert.doesNotMatch(
     html,
     /Qualitative results of CustomDance across five FineDance coarse styles/,
+  );
+  assert.doesNotMatch(
+    html,
+    /Task-level ratings across the five interface conditions|Rank distributions across music alignment/,
   );
   assert.doesNotMatch(html, /Style range|Authoring experience|Dance quality/);
   assert.doesNotMatch(html, /Rank-1 overall|Authoring time|Recall@10/);

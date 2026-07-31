@@ -238,55 +238,6 @@ export default function Home() {
           </figure>
         </div>
 
-        <div className="results-layout">
-          <figure className="result-card result-card-wide">
-            <img
-              src="assets/media/results-genres.webp"
-              alt="Qualitative CustomDance results across five FineDance coarse styles conditioned on user preferences."
-              loading="lazy"
-            />
-            <figcaption>
-              Qualitative results of CustomDance across five FineDance coarse
-              styles, conditioned on user preferences.
-            </figcaption>
-          </figure>
-
-          <div className="result-grid">
-            <figure className="result-card">
-              <img
-                src="assets/media/results-ratings.webp"
-                alt="Task-level ratings for controllability, pose satisfaction, and description fulfillment."
-                loading="lazy"
-              />
-              <figcaption>
-                Task-level ratings across the five interface conditions.
-              </figcaption>
-            </figure>
-            <figure className="result-card">
-              <img
-                src="assets/media/results-ranking.webp"
-                alt="Rank distributions for music alignment, description fulfillment, and overall performance."
-                loading="lazy"
-              />
-              <figcaption>
-                Rank distributions across music alignment, description
-                fulfillment, and overall performance.
-              </figcaption>
-            </figure>
-          </div>
-
-          <figure className="result-card">
-            <img
-              src="assets/media/results-comparison.webp"
-              alt="Qualitative comparison of CustomDance, MEGADance, Lodge, and a basic editor on a street-style excerpt."
-              loading="lazy"
-            />
-            <figcaption>
-              Qualitative comparison on a street-style excerpt conditioned on
-              user preferences.
-            </figcaption>
-          </figure>
-        </div>
       </section>
 
       <section className="section" id="video">
