@@ -10,13 +10,13 @@ const authors = [
   { name: "Rawan Alghofaili", affiliation: "1" },
 ];
 
-const stages = [
+const methodStages = [
   {
     number: "01",
     title: "Choreographic Motif Planning",
     components: "MLLM Planner / Anchors / Cues",
     copy: "Music and global intent are used to propose timeline anchors and local creativity cues.",
-    poster: "assets/media/ui-planning.webp",
+    poster: "assets/media/workflow-motif-planning-poster.jpg",
     video: "assets/media/workflow-motif-planning.mp4",
   },
   {
@@ -24,7 +24,7 @@ const stages = [
     title: "Dance Phrase Generation",
     components: "Retriever / Dance Library / Recommendation",
     copy: "Creators explore ranked, real dance phrases using local text and body-part controls.",
-    poster: "assets/media/ui-retrieval.webp",
+    poster: "assets/media/workflow-phrase-generation-poster.jpg",
     video: "assets/media/workflow-phrase-generation.mp4",
   },
   {
@@ -32,8 +32,18 @@ const stages = [
     title: "Completion and Refinement",
     components: "Completer / Diagnoser / Remaker",
     copy: "Generated transitions and local repair preserve the creator's phrase choices.",
-    poster: "assets/media/ui-refinement.webp",
+    poster: "assets/media/workflow-completion-refinement-poster.jpg",
     video: "assets/media/workflow-completion-refinement.mp4",
+  },
+];
+
+const workflowStages = [
+  ...methodStages,
+  {
+    number: "04",
+    title: "Final Result",
+    poster: "assets/media/workflow-final-result-poster.jpg",
+    video: "assets/media/workflow-final-result.mp4",
   },
 ];
 
@@ -154,7 +164,7 @@ export default function Home() {
           </figure>
 
           <div className="method-grid" aria-label="CustomDance stages">
-            {stages.map((stage) => (
+            {methodStages.map((stage) => (
               <article key={stage.number}>
                 <span>{stage.number}</span>
                 <h3>{stage.title}</h3>
@@ -173,7 +183,7 @@ export default function Home() {
         </div>
 
         <div className="workflow-grid">
-          {stages.map((stage) => (
+          {workflowStages.map((stage) => (
             <figure key={stage.number} className="workflow-card">
               <video
                 controls

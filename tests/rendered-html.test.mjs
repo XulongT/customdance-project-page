@@ -44,8 +44,14 @@ test("renders the CustomDance project page", async () => {
   assert.match(html, /CustomDance Framework/);
   assert.match(html, /User Workflow/);
   assert.match(html, /workflow-motif-planning\.mp4/);
+  assert.match(html, /workflow-motif-planning-poster\.jpg/);
   assert.match(html, /workflow-phrase-generation\.mp4/);
+  assert.match(html, /workflow-phrase-generation-poster\.jpg/);
   assert.match(html, /workflow-completion-refinement\.mp4/);
+  assert.match(html, /workflow-completion-refinement-poster\.jpg/);
+  assert.match(html, /workflow-final-result\.mp4/);
+  assert.match(html, /workflow-final-result-poster\.jpg/);
+  assert.match(html, /Final Result/);
   assert.match(html, /Customized Choreography Results/);
   assert.match(html, /results-popping-comparison\.mp4/);
   assert.match(html, /results-hantang-comparison\.mp4/);
