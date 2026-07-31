@@ -33,15 +33,26 @@ test("renders the CustomDance project page", async () => {
     /<title>CustomDance \| Interactive 3D Choreography Authoring<\/title>/i,
   );
   assert.match(html, /SIGGRAPH Asia 2026/);
-  assert.match(html, /01 \/ Abstract/);
+  assert.match(html, />Abstract</);
   assert.doesNotMatch(
     html,
     /Our evaluations demonstrate that CustomDance not only highlights/,
   );
-  assert.match(html, /02 \/ Video/);
-  assert.match(html, /The video contains two parts/);
+  assert.match(html, /Overview Video/);
   assert.match(html, /customdance_demo_video\.mp4/);
-  assert.match(html, /Choreography shaped around creative intent/);
+  assert.match(html, /customdance_demo_video-poster\.jpg/);
+  assert.match(html, /CustomDance Framework/);
+  assert.match(html, /User Workflow/);
+  assert.match(html, /workflow-motif-planning\.mp4/);
+  assert.match(html, /workflow-phrase-generation\.mp4/);
+  assert.match(html, /workflow-completion-refinement\.mp4/);
+  assert.match(html, /Customized Choreography Results/);
+  assert.match(html, /results-popping-comparison\.mp4/);
+  assert.match(html, /results-hantang-comparison\.mp4/);
+  assert.match(html, /results-popping-comparison-poster\.jpg/);
+  assert.match(html, /results-hantang-comparison-poster\.jpg/);
+  assert.match(html, /powerful Popping routine/);
+  assert.match(html, /elegant HanTang routine/);
   assert.doesNotMatch(html, /Two studies examine the complete workflow/);
   assert.match(html, /Choreographic Motif Planning/);
   assert.match(html, /Dance Phrase Generation/);
