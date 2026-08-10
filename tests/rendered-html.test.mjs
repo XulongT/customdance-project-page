@@ -72,7 +72,9 @@ test("renders the CustomDance project page", async () => {
   assert.match(html, /Retriever \/ Dance Library \/ Recommendation/);
   assert.match(html, /Completion and Refinement/);
   assert.match(html, /Diagnoser/);
-  assert.match(html, /Proceedings of the SIGGRAPH Asia 2026 Conference Papers/);
+  assert.match(html, /@article\{tang2026customdance/);
+  assert.match(html, /arXiv preprint arXiv:2608\.06722/);
+  assert.doesNotMatch(html, /Proceedings of the SIGGRAPH Asia 2026 Conference Papers/);
   assert.match(html, /Copy BibTeX/);
   assert.doesNotMatch(
     html,
