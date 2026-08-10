@@ -2,6 +2,11 @@ import { BibtexBlock } from "./BibtexBlock";
 
 export const dynamic = "force-static";
 
+const paperPdfUrl = "https://arxiv.org/pdf/2608.06722";
+const canonicalUrl = "https://xulongt.github.io/customdance-project-page/";
+const paperTitle =
+  "CustomDance: Customized 3D Dance Generation with Coarse-to-Fine Human-Centered Interactive Control";
+
 const authors = [
   { name: "Xulong Tang", affiliation: "1" },
   { name: "Kaixing Yang", affiliation: "3" },
@@ -47,9 +52,32 @@ const workflowStages = [
   },
 ];
 
+const scholarlyArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  name: paperTitle,
+  url: canonicalUrl,
+  sameAs: paperPdfUrl,
+  description:
+    "CustomDance is a coarse-to-fine interactive system designed for customized 3D dance generation.",
+  author: authors.map((author) => ({
+    "@type": "Person",
+    name: author.name,
+  })),
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "arXiv",
+    value: "2608.06722",
+  },
+};
+
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(scholarlyArticleSchema) }}
+      />
       <a className="skip-link" href="#abstract">
         Skip to abstract
       </a>
@@ -81,7 +109,7 @@ export default function Home() {
           <h1 id="page-title">CustomDance</h1>
           <p className="subtitle">
             Customized 3D Dance Generation with a Coarse-to-Fine
-            Human-Centered Interactive System
+            Human-Centered Interactive Control
           </p>
 
           <div className="authors" aria-label="Authors">
@@ -106,7 +134,15 @@ export default function Home() {
           </div>
 
           <div className="actions" aria-label="Project sections">
-            <a className="button primary" href="#video">
+            <a
+              className="button primary"
+              href={paperPdfUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Paper
+            </a>
+            <a className="button" href="#video">
               Demo Video
             </a>
             <a className="button" href="#method">

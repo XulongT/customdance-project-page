@@ -3,19 +3,36 @@ import "./globals.css";
 
 const isGitHubPagesBuild = process.env.GITHUB_PAGES === "true";
 const assetBase = isGitHubPagesBuild ? "/customdance-project-page" : "";
+const canonicalUrl = "https://xulongt.github.io/customdance-project-page/";
+const paperPdfUrl = "https://arxiv.org/pdf/2608.06722";
+const paperTitle =
+  "CustomDance: Customized 3D Dance Generation with Coarse-to-Fine Human-Centered Interactive Control";
 
 export const metadata: Metadata = {
-  title: {
-    default: "CustomDance | Interactive 3D Choreography Authoring",
-    template: "%s | CustomDance",
-  },
+  metadataBase: new URL("https://xulongt.github.io"),
+  title: paperTitle,
   description:
-    "CustomDance is a coarse-to-fine, human-in-the-loop system for customized 3D dance generation.",
+    "CustomDance is an interactive, human-centered system for customized 3D dance generation through music-aware planning, phrase retrieval, and iterative refinement.",
+  alternates: {
+    canonical: canonicalUrl,
+    types: {
+      "application/pdf": paperPdfUrl,
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   keywords: [
     "CustomDance",
     "3D dance generation",
     "interactive choreography",
     "human-in-the-loop",
+    "3D human motion generation",
     "SIGGRAPH Asia 2026",
   ],
   authors: [
@@ -29,10 +46,11 @@ export const metadata: Metadata = {
     icon: `${assetBase}/favicon.png`,
   },
   openGraph: {
-    title: "CustomDance",
+    title: paperTitle,
     description:
-      "Customized 3D dance generation through coarse-to-fine human-centered authoring.",
+      "Interactive, human-centered 3D choreography authoring through music-aware planning, phrase retrieval, and iterative refinement.",
     type: "website",
+    url: canonicalUrl,
     images: [
       {
         url: `${assetBase}/assets/media/hero-teaser.webp`,
@@ -41,6 +59,10 @@ export const metadata: Metadata = {
         alt: "CustomDance choreography results.",
       },
     ],
+  },
+  other: {
+    citation_title: paperTitle,
+    citation_pdf_url: paperPdfUrl,
   },
 };
 

@@ -30,8 +30,15 @@ test("renders the CustomDance project page", async () => {
   const html = await response.text();
   assert.match(
     html,
-    /<title>CustomDance \| Interactive 3D Choreography Authoring<\/title>/i,
+    /<title>CustomDance: Customized 3D Dance Generation with Coarse-to-Fine Human-Centered Interactive Control<\/title>/i,
   );
+  assert.match(
+    html,
+    /<link rel="canonical" href="https:\/\/xulongt\.github\.io\/customdance-project-page\/"/i,
+  );
+  assert.match(html, /https:\/\/arxiv\.org\/pdf\/2608\.06722/);
+  assert.match(html, /application\/ld\+json/);
+  assert.match(html, /ScholarlyArticle/);
   assert.match(html, /SIGGRAPH Asia 2026/);
   assert.match(html, />Abstract</);
   assert.doesNotMatch(

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const bibtex = `@inproceedings{tang2026customdance,
   title     = {CustomDance: Customized 3D Dance Generation
-               with Coarse-to-Fine Human-Centered Interactive System},
+               with Coarse-to-Fine Human-Centered Interactive Control},
   author    = {Tang, Xulong and Yang, Kaixing and Guo, Xiaohu and
                Prabhakaran, Balakrishnan and Alghofaili, Rawan},
   booktitle = {Proceedings of the SIGGRAPH Asia 2026 Conference Papers},
