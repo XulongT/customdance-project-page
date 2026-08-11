@@ -108,7 +108,7 @@ export default function Home() {
           <p className="venue">SIGGRAPH Asia 2026</p>
           <h1 id="page-title">CustomDance</h1>
           <p className="subtitle">
-            Customized 3D Dance Generation with a Coarse-to-Fine
+            Customized 3D Dance Generation with Coarse-to-Fine
             Human-Centered Interactive Control
           </p>
 

@@ -32,6 +32,7 @@ test("renders the CustomDance project page", async () => {
     html,
     /<title>CustomDance: Customized 3D Dance Generation with Coarse-to-Fine Human-Centered Interactive Control<\/title>/i,
   );
+  assert.doesNotMatch(html, /with a Coarse-to-Fine Human-Centered Interactive Control/);
   assert.match(
     html,
     /<link rel="canonical" href="https:\/\/xulongt\.github\.io\/customdance-project-page\/"/i,
