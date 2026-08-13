@@ -11,7 +11,7 @@ const authors = [
   { name: "Xulong Tang", affiliation: "1" },
   { name: "Kaixing Yang", affiliation: "3" },
   { name: "Xiaohu Guo", affiliation: "1" },
-  { name: "Balakrishnan Prabhakaran", affiliation: "2" },
+  { name: "Prabhakaran Balakrishnan", affiliation: "2" },
   { name: "Rawan Alghofaili", affiliation: "1" },
 ];
 

@@ -40,6 +40,10 @@ test("renders the CustomDance project page", async () => {
   assert.match(html, /https:\/\/arxiv\.org\/pdf\/2608\.06722/);
   assert.match(html, /application\/ld\+json/);
   assert.match(html, /ScholarlyArticle/);
+  assert.match(html, /Prabhakaran Balakrishnan/);
+  assert.match(html, /Balakrishnan, Prabhakaran/);
+  assert.doesNotMatch(html, /Balakrishnan Prabhakaran/);
+  assert.doesNotMatch(html, /Prabhakaran, Balakrishnan/);
   assert.match(html, /SIGGRAPH Asia 2026/);
   assert.match(html, />Abstract</);
   assert.doesNotMatch(

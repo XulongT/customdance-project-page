@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     { name: "Xulong Tang" },
     { name: "Kaixing Yang" },
     { name: "Xiaohu Guo" },
-    { name: "Balakrishnan Prabhakaran" },
+    { name: "Prabhakaran Balakrishnan" },
     { name: "Rawan Alghofaili" },
   ],
   icons: {
