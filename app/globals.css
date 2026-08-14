@@ -256,6 +256,17 @@ h1 {
   background: var(--cyan);
 }
 
+.button[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.button[aria-disabled="true"]:hover {
+  border-color: var(--line);
+  background: var(--panel);
+  transform: none;
+}
+
 .section {
   padding: 92px var(--pad-x);
 }

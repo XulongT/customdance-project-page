@@ -133,7 +133,7 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="actions" aria-label="Project sections">
+          <div className="actions" aria-label="Project resources">
             <a
               className="button primary"
               href={paperPdfUrl}
@@ -143,14 +143,11 @@ export default function Home() {
               Paper
             </a>
             <a className="button" href="#video">
-              Demo Video
+              Video
             </a>
-            <a className="button" href="#method">
-              Method
-            </a>
-            <a className="button" href="#results">
-              Results
-            </a>
+            <span className="button" aria-disabled="true">
+              Code
+            </span>
           </div>
         </section>
       </header>
@@ -289,7 +286,7 @@ export default function Home() {
       <section className="section" id="video">
         <div className="section-heading center">
           <p className="section-kicker">Overview Video</p>
-          <h2>Video</h2>
+          <h2>Demo Video</h2>
         </div>
         <figure className="video-frame">
           <video

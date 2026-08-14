@@ -45,12 +45,19 @@ test("renders the CustomDance project page", async () => {
   assert.doesNotMatch(html, /Balakrishnan Prabhakaran/);
   assert.doesNotMatch(html, /Prabhakaran, Balakrishnan/);
   assert.match(html, /SIGGRAPH Asia 2026/);
+  assert.match(html, /aria-label="Project resources"/);
+  assert.match(html, />Paper<\/a>/);
+  assert.match(html, />Video<\/a>/);
+  assert.match(html, /aria-disabled="true">Code<\/span>/);
+  assert.match(html, /href="#method">Method<\/a>/);
+  assert.match(html, /href="#results">Results<\/a>/);
   assert.match(html, />Abstract</);
   assert.doesNotMatch(
     html,
     /Our evaluations demonstrate that CustomDance not only highlights/,
   );
   assert.match(html, /Overview Video/);
+  assert.match(html, /<h2>Demo Video<\/h2>/);
   assert.match(html, /customdance_demo_video\.mp4/);
   assert.match(html, /customdance_demo_video-poster\.jpg/);
   assert.match(html, /CustomDance Framework/);
